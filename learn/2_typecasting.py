@@ -1,0 +1,7 @@
+print(float(2))
+print(int(1.1))
+print(int('1'))
+print(type(True))
+print(6//2)
+print(6/2)
+print(int(3.99))
