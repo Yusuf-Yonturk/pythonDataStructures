@@ -10,8 +10,15 @@ Name=Name +" is the best"
 Sentence=Sentence +" is the best"
 print(Name)
 print(Name.upper())
+print(Name.lower())
 print(Sentence)
 print(Name.find('el'))
 
 split_string=Sentence.split()
 print(split_string)
+
+my_string="       Hello" 
+trimmed = my_string.strip()
+print(trimmed)
+
+print("veri bilimi temelleri".title())
