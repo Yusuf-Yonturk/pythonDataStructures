@@ -144,3 +144,39 @@ class Graph():
 
 val = Graph(200)
 print(val.id)
+
+givenstring="Lorem ipsum dolor! diam amet, consetetur Lorem magna. sed diam nonumy eirmod tempor. diam et labore? et diam magna. et diam amet."
+
+class TextAnalyzer(object):
+    
+    def __init__ (self, text):
+        formattedText=text.replace('.','').replace('!','').replace('?','').replace(',','')
+        
+        # make text lowercase
+        formattedText=formattedText.lower()
+        self.fmText=formattedText
+        
+    def freqAll(self):        
+        wordList=self.fmText.split()
+
+        freqMap={}
+        for word in set(wordList):
+            freqMap[word]=wordList.count(word)
+        return freqMap
+        
+        # Create dictionary
+           
+    def freqOf(self,word):
+        freqDict=self.freqAll()
+        if word in freqDict:
+            return freqDict[word]
+        else:
+            return 0
+    
+t1=TextAnalyzer(givenstring)
+print(t1.fmText)
+
+print(t1.freqAll())
+
+print(t1.freqOf("magna"))
+
